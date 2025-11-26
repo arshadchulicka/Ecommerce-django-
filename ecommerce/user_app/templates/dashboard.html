@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome {{ request.session.username }}</h2>
+
+<h3>Available Products</h3>
+<div class="row">
+    
+    {% for product in products %}
+    <div class="col-md-3">
+        <div class="card">
+            <img src="{{ product.image.url }}" class="card-img-top">
+            <div class="card-body">
+                <h5>{{ product.name }}</h5>
+                <p>₹{{ product.price }}</p>
+                <a href="{% url 'add_to_cart' product.id %}" class="btn btn-success mt-2">Add to Cart</a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="col-md-2">
+            <div class="card p-3 shadow">
+                <h4>My Cart</h4>
+                <hr>
+                
+                <a href="{% url 'view_cart' %}" class="btn btn-success w-100">View My Cart</a>
+            </div>
+        </div>
+</div>
+{% endblock %}

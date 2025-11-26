@@ -1,0 +1,43 @@
+/* Background image for entire site */
+.bg-custom {
+    background-image: url("../images/bgimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Page container styling */
+.container {
+    background: rgba(172, 143, 143, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card styling for product list */
+.product-card {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+.btn-primary {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+/* Styling headings */
+h1, h2, h3 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+}

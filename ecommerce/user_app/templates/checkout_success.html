@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="alert alert-success">
+    <h4>Order placed (demo)</h4>
+    <p>This is a demo checkout. Extend this to integrate real payment and order creation.</p>
+</div>
+<a href="{% url 'session_dashboard' %}" class="btn btn-primary">Continue Shopping</a>
+{% endblock %}
